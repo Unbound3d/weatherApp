@@ -1,9 +1,9 @@
 import requests
-import string
 from flask import render_template, flash, url_for, redirect, request
 from models import City
 from functions import *
 from main import *
+
 
 @app.route('/')
 def index_get():
