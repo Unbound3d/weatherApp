@@ -4,6 +4,6 @@
  The application is built with Python, Flask, SQLAlchemy, SQLite and HTML.
 
  # Screenshot
- ![screenshot](images\screenshot.png)
+ ![screenshot](images/screenshot.png)
 
 
