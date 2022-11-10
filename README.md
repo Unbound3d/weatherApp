@@ -4,6 +4,6 @@
  The application is built with Python, Flask, SQLAlchemy, SQLite and HTML.
 
  # Screenshot
- ![alt text](https://github.com/[Unbound3d]/[weatherApp]/blob/[main]/images/screenshot.png?raw=true)
+ ![screenshot](https://github.com/[Unbound3d]/[weatherApp]/blob/[main]/screenshot.png?raw=true)
 
 
