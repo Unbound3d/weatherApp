@@ -7,7 +7,7 @@
  ### Signup page
  ![screenshot](screenshots/signup.png)
 
- ### Signup page
+ ### Login page
  ![screenshot](screenshots/login.png)
 
  ### Dashboard
