@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+            </div>
+        {% endif %}
+        {% endwith %}
+
+            <form method="POST" action="/signup">
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+    <H1>Sign up</H1>
+  </br>
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form3Example1" name="first_name" class="form-control" />
+        <label class="form-label" for="form3Example1">First name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" id="form3Example2" name="last_name" class="form-control" />
+        <label class="form-label" for="form3Example2">Last name</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form3Example3" name="email" class="form-control" />
+    <label class="form-label" for="form3Example3">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form3Example4" name="password" class="form-control" />
+    <label class="form-label" for="form3Example4">Password</label>
+  </div>
+
+  <!-- Checkbox -->
+  <div class="form-check d-flex justify-content-left mb-4">
+    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+    <label class="form-check-label" for="form2Example33">
+      Subscribe to our newsletter
+    </label>
+  </div>
+  <div>Go to <a href="{{ url_for('login') }}">login page</a</div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>or sign in with:</p>
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

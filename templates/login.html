@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+            <form method="POST" action="/login">
+    <H1>Sign in</H1>
+  </br>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form3Example3" name="email" class="form-control" />
+    <label class="form-label" for="form3Example3">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form3Example4" name="password" class="form-control" />
+    <label class="form-label" for="form3Example4">Password</label>
+  </div>
+
+  <!-- Remember me -->
+  <div class="field">
+    <label class="checkbox">
+        <input type="checkbox">
+        Remember me
+    </label>
+</div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+   <div>
+    <p class="mb-0">Don't have an account? <a href="{{ url_for('signup') }}" class="text-white-50 fw-bold">Sign Up</a></p>
+  </div>
+            
+                            <!-- Register buttons -->
+  <div class="text-center">
+    <p>or sign in with:</p>
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-primary btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+</form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

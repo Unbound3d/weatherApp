@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    {% if current_user.is_authenticated %}
+    <div class="container has-text-centered">
+        Welcome, {{ first_name }}!</br>
+        Go back <a href="{{ url_for('index_get') }}">Home</a>.
+    </div>
+    {% endif %}
+</h1>
+{% endblock %}

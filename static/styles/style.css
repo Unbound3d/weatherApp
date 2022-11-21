@@ -1,0 +1,28 @@
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: url(../images/bg-01.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {
+    font-family: fantasy;
+    border-top: 2px solid orange;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
+    width: 350px;
+    text-align: center;
+    /*box-shadow: 4px 4px 5px pink;*/
+    margin-top: 10px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color:#FF8900;
+    border-color: #285e8e; /*set the color you want here*/
+}
